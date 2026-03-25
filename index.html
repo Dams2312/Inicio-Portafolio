@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio — Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVEGACIÓN
+══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo">Portfolio</div>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#certificados">Certificados</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+
+<!-- ══════════════════════════════════════════
+     SECCIÓN 1 — PORTADA / HERO
+══════════════════════════════════════════ -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-deco"></div>
+
+  <div class="hero-text">
+    <div class="hero-badge">Disponible para trabajar</div>
+
+    <!-- ✏️ EDITA: tu nombre completo -->
+    <h1 class="hero-name">
+      Danny Julian<br><span>Velasco Olarte</span>
+    </h1>
+
+    <!-- ✏️ EDITA: tu profesión -->
+    <p class="hero-role">Full Stack Developer · Software Engineer</p>
+
+    <!-- ✏️ EDITA: descripción personal breve -->
+    <p class="hero-desc">
+      Tecnico desarrollador de software en entrenamiento con experiencia en 
+      el desarrollo  en lenguajes de programación como Python, Javascript, C# y 
+      uso de tecnologías como githud,N8N se destaca por su responsabilidad , 
+      mentalidad de crecimiento constante, autodidacta y el manejo de  
+      metodologías ágiles y marcos de trabajo como scrum.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+      <a href="#contacto"  class="btn btn-outline">Contáctame</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-img-frame">
+      <!-- ✏️ EDITA: reemplaza con tu foto -->
+      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80"
+          alt="Foto de perfil"/>
+      <div class="hero-tag hero-tag-tl">💻 Full Stack Dev</div>
+      <div class="hero-tag hero-tag-br">🚀 &lt;disponible /&gt;</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+    SECCIÓN 2 — CV
+══════════════════════════════════════════ -->
+<section id="cv">
+  <div class="section-label">02 — Currículum</div>
+  <h2 class="section-title">Mi <em>trayectoria</em></h2>
+
+  <!-- ✏️ EDITA: escribe qué ofreces como profesional -->
+  <p class="section-subtitle reveal">
+    que ofresco como profesional: tus servicios,
+    tu enfoque de trabajo y el valor que aportas a cada proyecto.
+  </p>
+
+  <div class="cv-grid reveal">
+
+    <!-- Experiencia -->
+    <div class="cv-block">
+      <h3>⚡ Experiencia</h3>
+
+      <!-- ✏️ EDITA cada ítem con tu experiencia real -->
+      <div class="cv-item">
+        <div class="cv-dot"></div>
+        <div class="cv-item-text">
+          <strong>Cargo / Empresa — Escribe aquí</strong>
+          <span>Año inicio – Año fin · Descripción breve del rol</span>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-dot"></div>
+        <div class="cv-item-text">
+          <strong>Cargo / Empresa — Escribe aquí</strong>
+          <span>Año inicio – Año fin · Descripción breve del rol</span>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-dot"></div>
+        <div class="cv-item-text">
+          <strong>Freelance Full Stack Developer</strong>
+          <span>2022 – Presente · Desarrollo de aplicaciones web a medida</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Educación -->
+    <div class="cv-block">
+      <h3>🎓 Educación</h3>
+
+      <div class="cv-item">
+        <div class="cv-dot"></div>
+        <div class="cv-item-text">
+          <strong>Tu título / carrera — Institución</strong>
+          <span>Año inicio – Año fin</span>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-dot"></div>
+        <div class="cv-item-text">
+          <strong>Curso / Bootcamp — Plataforma</strong>
+          <span>Año · Descripción</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Habilidades técnicas -->
+    <div class="cv-block" style="grid-column: 1 / -1;">
+      <h3>🛠 Habilidades Técnicas</h3>
+      <div class="skills-wrap">
+        <span class="skill-pill"><span class="skill-icon">🟨</span>JavaScript</span>
+        <span class="skill-pill"><span class="skill-icon">🟣</span>C#</span>
+        <span class="skill-pill"><span class="skill-icon">🐍</span>Python</span>
+        <span class="skill-pill"><span class="skill-icon">⚙️</span>n8n</span>
+        <span class="skill-pill"><span class="skill-icon">🗄️</span>MySQL</span>
+        <span class="skill-pill"><span class="skill-icon">🌐</span>HTML5</span>
+        <span class="skill-pill"><span class="skill-icon">🎨</span>CSS3</span>
+        <span class="skill-pill"><span class="skill-icon">🖥️</span>.NET</span>
+        <span class="skill-pill"><span class="skill-icon">🐙</span>Git / GitHub</span>
+        <span class="skill-pill"><span class="skill-icon">🤖</span>IA / LLMs</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECCIÓN 3 — PROYECTOS
+══════════════════════════════════════════ -->
+<section id="proyectos">
+  <div class="section-label">03 — Portafolio</div>
+  <h2 class="section-title">Proyectos <em>destacados</em></h2>
+  <p class="section-subtitle reveal">
+    Selección de trabajos que reflejan mis habilidades técnicas y
+    mi capacidad de llevar ideas a producción.
+  </p>
+
+  <div class="projects-grid reveal">
+
+    <!-- ✏️ EDITA cada tarjeta con tu proyecto real -->
+    <div class="project-card">
+      <img class="project-img"
+        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80"
+        alt="Proyecto 1"/>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">HTML5</span>
+          <span class="project-tag">Css</span>
+        </div>
+        <h3 class="project-title">Nombre del Proyecto 1</h3>
+        <p class="project-desc">Describe brevemente qué hace este proyecto, el problema que resuelve y las tecnologías que usaste.</p>
+        <!-- ✏️ EDITA: pon aquí el link a tu repositorio o demo -->
+        <a href="#" class="project-link">Ver proyecto</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-img"
+        src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=600&q=80"
+        alt="Proyecto 2"/>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">C#</span>
+          <span class="project-tag">.NET</span>
+          <span class="project-tag">Mysql</span>
+        </div>
+        <h3 class="project-title">Nombre del Proyecto 2</h3>
+        <p class="project-desc">Describe brevemente qué hace este proyecto, el problema que resuelve y las tecnologías que usaste.</p>
+        <a href="#" class="project-link">Ver proyecto</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-img"
+        src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80"
+        alt="Proyecto 3"/>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">n8n</span>
+          <span class="project-tag">API REST</span>
+        </div>
+        <h3 class="project-title">Nombre del Proyecto 3</h3>
+        <p class="project-desc">Describe brevemente qué hace este proyecto, el problema que resuelve y las tecnologías que usaste.</p>
+        <a href="#" class="project-link">Ver proyecto</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-img"
+        src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80"
+        alt="Proyecto 4"/>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JS</span>
+        </div>
+        <h3 class="project-title">Nombre del Proyecto 4</h3>
+        <p class="project-desc">Describe brevemente qué hace este proyecto, el problema que resuelve y las tecnologías que usaste.</p>
+        <a href="#" class="project-link">Ver proyecto</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECCIÓN 4 — CERTIFICADOS
+══════════════════════════════════════════ -->
+<section id="certificados">
+  <div class="section-label">04 — Formación</div>
+  <h2 class="section-title">Certificados y <em>cursos</em></h2>
+  <p class="section-subtitle reveal">Aprendizaje continuo que respalda mis habilidades técnicas.</p>
+
+  <div class="certs-grid reveal">
+    <!-- ✏️ EDITA cada certificado con tu formación real -->
+    <div class="cert-card">
+      <div class="cert-icon">🏅</div>
+      <div class="cert-info">
+        <strong>Nombre del Certificado</strong>
+        <span>Plataforma / Institución</span>
+      </div>
+      <span class="cert-year">2024</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏅</div>
+      <div class="cert-info">
+        <strong>Nombre del Certificado</strong>
+        <span>Plataforma / Institución</span>
+      </div>
+      <span class="cert-year">2024</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🎯</div>
+      <div class="cert-info">
+        <strong>Nombre del Certificado</strong>
+        <span>Plataforma / Institución</span>
+      </div>
+      <span class="cert-year">2023</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">⭐</div>
+      <div class="cert-info">
+        <strong>Nombre del Certificado</strong>
+        <span>Plataforma / Institución</span>
+      </div>
+      <span class="cert-year">2023</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔐</div>
+      <div class="cert-info">
+        <strong>Nombre del Certificado</strong>
+        <span>Plataforma / Institución</span>
+      </div>
+      <span class="cert-year">2022</span>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🤖</div>
+      <div class="cert-info">
+        <strong>Nombre del Certificado</strong>
+        <span>Plataforma / Institución</span>
+      </div>
+      <span class="cert-year">2025</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECCIÓN 5 — TESTIMONIOS
+══════════════════════════════════════════ -->
+<section id="testimonios">
+  <div class="section-label">05 — Recomendaciones</div>
+  <h2 class="section-title">Lo que dicen <em>de mí</em></h2>
+  <p class="section-subtitle reveal">Testimonios de clientes, colegas y compañeros de trabajo.</p>
+
+  <div class="testimonios-grid reveal">
+    <!-- ✏️ EDITA cada testimonio con recomendaciones reales -->
+    <div class="testimonio-card">
+      <p class="testimonio-text">
+        "Testimonio de un cliente o colega. Describe qué destacan
+        de tu trabajo, habilidades y actitud profesional."
+      </p>
+      <div class="testimonio-author">
+        <img class="testimonio-avatar"
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+          alt="Nombre Persona"/>
+        <div class="testimonio-name">
+          <strong>Nombre de la Persona</strong>
+          <span>Cargo · Empresa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonio-card">
+      <p class="testimonio-text">
+        "Testimonio de un cliente o colega. Describe qué destacan
+        de tu trabajo, habilidades y actitud profesional."
+      </p>
+      <div class="testimonio-author">
+        <img class="testimonio-avatar"
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+          alt="Nombre Persona"/>
+        <div class="testimonio-name">
+          <strong>Nombre de la Persona</strong>
+          <span>Cargo · Empresa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonio-card">
+      <p class="testimonio-text">
+        "Testimonio de un cliente o colega. Describe qué destacan
+        de tu trabajo, habilidades y actitud profesional."
+      </p>
+      <div class="testimonio-author">
+        <img class="testimonio-avatar"
+          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80"
+          alt="Nombre Persona"/>
+        <div class="testimonio-name">
+          <strong>Nombre de la Persona</strong>
+          <span>Cargo · Empresa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SECCIÓN 6 — CONTACTO
+══════════════════════════════════════════ -->
+<section id="contacto">
+  <div class="section-label">06 — Contacto</div>
+  <h2 class="section-title">Hablemos sobre<br>tu <em>próximo proyecto</em></h2>
+  <p class="section-subtitle">¿Tienes una idea? ¿Buscas un desarrollador? Escríbeme.</p>
+
+  <div class="contact-layout reveal">
+
+    <!-- Redes y datos de contacto -->
+    <div class="contact-info-items">
+      <!-- ✏️ EDITA cada enlace con tus datos reales -->
+      <a href="mailto:tuemail@gmail.com" class="contact-item">
+        <div class="contact-item-icon">📧</div>
+        <div class="contact-item-text">
+          <strong>Correo electrónico</strong>
+          <span>tuemail@gmail.com</span>
+        </div>
+      </a>
+      <a href="https://github.com/tuusuario" target="_blank" class="contact-item">
+        <div class="contact-item-icon">🐙</div>
+        <div class="contact-item-text">
+          <strong>GitHub</strong>
+          <span>github.com/tuusuario</span>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-item">
+        <div class="contact-item-icon">💼</div>
+        <div class="contact-item-text">
+          <strong>LinkedIn</strong>
+          <span>linkedin.com/in/tuusuario</span>
+        </div>
+      </a>
+      <a href="https://wa.me/573001234567" target="_blank" class="contact-item">
+        <div class="contact-item-icon">💬</div>
+        <div class="contact-item-text">
+          <strong>WhatsApp</strong>
+          <span>+57 300 123 4567</span>
+        </div>
+      </a>
+      <a href="https://instagram.com/tuusuario" target="_blank" class="contact-item">
+        <div class="contact-item-icon">📸</div>
+        <div class="contact-item-text">
+          <strong>Instagram</strong>
+          <span>@tuusuario</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre"/>
+        </div>
+        <div class="form-group">
+          <label>Correo</label>
+          <input type="email" placeholder="tu@email.com"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Asunto</label>
+        <input type="text" placeholder="¿En qué puedo ayudarte?"/>
+      </div>
+      <div class="form-group">
+        <label>Mensaje</label>
+        <textarea rows="5" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+      </div>
+      <button class="btn-send">Enviar mensaje ✦</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <!-- ✏️ EDITA: tu nombre -->
+  <p>Diseñado y desarrollado con 💜 por <strong>Tu Nombre</strong> · 2025</p>
+</footer>
+
+
+<!-- Script externo — siempre al final del body -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
