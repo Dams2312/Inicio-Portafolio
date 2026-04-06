@@ -487,3 +487,71 @@ footer strong { color: var(--purple-300); }
   section { padding: 4rem 1.5rem; }
   #inicio { padding: 6rem 1.5rem 3rem; }
 }
+
+/* ══════════════════════════════════════════
+   BOTÓN DE IDIOMA
+══════════════════════════════════════════ */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .38rem .9rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--purple-300);
+  background: transparent;
+  color: var(--purple-700);
+  font-family: 'Space Mono', monospace;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  cursor: pointer;
+  transition: all .25s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lang-toggle:hover {
+  background: var(--purple-100);
+  border-color: var(--purple-700);
+  transform: translateY(-1px);
+}
+.lang-flag { font-size: .9rem; }
+
+/* ── ANIMACIÓN DE TRADUCCIÓN ── */
+@keyframes langFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.lang-fade {
+  animation: langFadeIn .3s ease forwards;
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  padding: 2rem 3rem;
+  font-size: .82rem;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: .06em;
+}
+footer strong { color: var(--purple-300); }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  #inicio { grid-template-columns: 1fr; text-align: center; }
+  .hero-visual { display: none; }
+  #cv .cv-grid { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  nav { padding: 1rem 1.5rem; gap: .8rem; }
+  section { padding: 4rem 1.5rem; }
+  #inicio { padding: 6rem 1.5rem 3rem; }
+}

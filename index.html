@@ -5,138 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portafolio — Full Stack Developer</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Hoja de estilos externa -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════
-     NAVEGACIÓN
-══════════════════════════════════════════ -->
 <nav>
   <div class="nav-logo">Portfolio</div>
   <ul class="nav-links">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#cv">Trayectoria</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#certificados">Certificados</a></li>
-    <li><a href="#testimonios">Testimonios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+    <li><a href="#cv" data-es="Trayectoria" data-en="Career">Trayectoria</a></li>
+    <li><a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+    <li><a href="#certificados" data-es="Certificados" data-en="Certificates">Certificados</a></li>
+    <li><a href="#testimonios" data-es="Testimonios" data-en="Testimonials">Testimonios</a></li>
+    <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
   </ul>
+  <button class="lang-toggle" id="langBtn" aria-label="Cambiar idioma">
+    <span class="lang-flag">🇬🇧</span>
+    <span class="lang-label">EN</span>
+  </button>
 </nav>
 
 
-<!-- ══════════════════════════════════════════
-     SECCIÓN 1 — PORTADA / HERO
-══════════════════════════════════════════ -->
+<!-- SECCIÓN 1 — HERO -->
 <section id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-deco"></div>
 
   <div class="hero-text">
-    <div class="hero-badge">Disponible para trabajar</div>
+    <div class="hero-badge" data-es="Disponible para trabajar" data-en="Available for work">Disponible para trabajar</div>
 
-    <!-- ✏️ EDITA: tu nombre completo -->
     <h1 class="hero-name">
       Danny Julian<br><span>Velasco Olarte</span>
     </h1>
 
-    <!-- ✏️ EDITA: tu profesión -->
     <p class="hero-role">Full Stack Developer · Software Engineer</p>
 
-    <!-- ✏️ EDITA: descripción personal breve -->
-    <p class="hero-desc">
-      Tecnico desarrollador de software en entrenamiento con experiencia en 
-      el desarrollo  en lenguajes de programación como Python, Javascript, C# y 
-      uso de tecnologías como githud,N8N se destaca por su responsabilidad , 
-      mentalidad de crecimiento constante, autodidacta y el manejo de  
-      metodologías ágiles y marcos de trabajo como scrum.
+    <p class="hero-desc"
+       data-es="Técnico desarrollador de software en entrenamiento con experiencia en lenguajes de programación como Python, Javascript, C# y uso de tecnologías como GitHub, N8N. Se destaca por su responsabilidad, mentalidad de crecimiento constante, autodidacta y el manejo de metodologías ágiles y marcos de trabajo como Scrum."
+       data-en="Software development technician in training with experience in programming languages such as Python, JavaScript, C# and technologies like GitHub, N8N. Known for responsibility, a constant growth mindset, being self-taught, and working with agile methodologies and frameworks like Scrum.">
+      Técnico desarrollador de software en entrenamiento con experiencia en lenguajes de programación como Python, Javascript, C# y uso de tecnologías como GitHub, N8N. Se destaca por su responsabilidad, mentalidad de crecimiento constante, autodidacta y el manejo de metodologías ágiles y marcos de trabajo como Scrum.
     </p>
 
     <div class="hero-cta">
-      <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
-      <a href="#contacto"  class="btn btn-outline">Contáctame</a>
+      <a href="#proyectos" class="btn btn-primary" data-es="Ver mis proyectos" data-en="View my projects">Ver mis proyectos</a>
+      <a href="#contacto"  class="btn btn-outline"  data-es="Contáctame"       data-en="Contact me">Contáctame</a>
     </div>
   </div>
 
   <div class="hero-visual">
     <div class="hero-img-frame">
-      <!-- ✏️ EDITA: reemplaza con tu foto -->
-      <img src="/src/image.webp"
-          alt="Foto de perfil"/>
+      <img src="/src/image.webp" alt="Foto de perfil"/>
       <div class="hero-tag hero-tag-tl">💻 Full Stack Dev</div>
-      <div class="hero-tag hero-tag-br">🚀 &lt;disponible /&gt;</div>
+      <div class="hero-tag hero-tag-br" data-es="🚀 &lt;disponible /&gt;" data-en="🚀 &lt;available /&gt;">🚀 &lt;disponible /&gt;</div>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════
-    SECCIÓN 2 — CV
-══════════════════════════════════════════ -->
+<!-- SECCIÓN 2 — CV -->
 <section id="cv">
-  <div class="section-label">02 — Currículum</div>
-  <h2 class="section-title">Mi <em>trayectoria</em></h2>
+  <div class="section-label" data-es="02 — Currículum" data-en="02 — Resume">02 — Currículum</div>
+  <h2 class="section-title" data-es="Mi <em>trayectoria</em>" data-en="My <em>career</em>">Mi <em>trayectoria</em></h2>
 
-  <!-- ✏️ EDITA: escribe qué ofreces como profesional -->
-  <p class="section-subtitle reveal">
-    sou una persona con mucha experiencia  habilidades, en el mundo tech y gracias 
-    compromiso y disposición para aprender y mejorar continuamente puedo 
-    aportor soluciones prácticas, trabajo en equipo y responsabilidad en cada tarea.
-    Me enfoco en generar valor y resultados positivos en cualquier proyecto en el que participe.
+  <p class="section-subtitle reveal"
+     data-es="Soy una persona con habilidades en el mundo tech y gracias a mi compromiso y disposición para aprender y mejorar continuamente puedo aportar soluciones prácticas, trabajo en equipo y responsabilidad en cada tarea. Me enfoco en generar valor y resultados positivos en cualquier proyecto en el que participe."
+     data-en="I am a person with skills in the tech world and thanks to my commitment and willingness to continuously learn and improve, I can provide practical solutions, teamwork, and responsibility in every task. I focus on generating value and positive results in any project I participate in.">
+    Soy una persona con habilidades en el mundo tech y gracias a mi compromiso y disposición para aprender y mejorar continuamente puedo aportar soluciones prácticas, trabajo en equipo y responsabilidad en cada tarea. Me enfoco en generar valor y resultados positivos en cualquier proyecto en el que participe.
   </p>
 
   <div class="cv-grid reveal">
 
-    <!-- Experiencia -->
     <div class="cv-block">
-      <h3>⚡ Experiencia</h3>
+      <h3 data-es="⚡ Experiencia" data-en="⚡ Experience">⚡ Experiencia</h3>
 
-      <!-- ✏️ EDITA cada ítem con tu experiencia real -->
       <div class="cv-item">
         <div class="cv-dot"></div>
         <div class="cv-item-text">
-          <strong>Programador</strong>
-          <span>Agosto 15 – septiembre ·rol como programdor utilizando metodologia Scrum</span>
+          <strong data-es="Programador" data-en="Programmer">Programador</strong>
+          <span data-es="Agosto 15 – Septiembre · Rol como programador utilizando metodología Scrum" data-en="August 15 – September · Role as programmer using Scrum methodology">Agosto 15 – Septiembre · Rol como programador utilizando metodología Scrum</span>
         </div>
       </div>
       <div class="cv-item">
         <div class="cv-dot"></div>
         <div class="cv-item-text">
-          <strong>Freelance Full Stack Developer</strong>
-          <span>2025 – Presente · Desarrollo de aplicaciones web a medida</span>
+          <strong data-es="Freelance Full Stack Developer" data-en="Freelance Full Stack Developer">Freelance Full Stack Developer</strong>
+          <span data-es="2025 – Presente · Desarrollo de aplicaciones web a medida" data-en="2025 – Present · Custom web application development">2025 – Presente · Desarrollo de aplicaciones web a medida</span>
         </div>
       </div>
     </div>
 
-    <!-- Educación -->
     <div class="cv-block">
-      <h3>🎓 Educación</h3>
+      <h3 data-es="🎓 Educación" data-en="🎓 Education">🎓 Educación</h3>
 
       <div class="cv-item">
         <div class="cv-dot"></div>
         <div class="cv-item-text">
-          <strong>Tecnologia Sofware - Campuslands</strong>
-          <span> 20 Julio 2025 – Presente</span>
+          <strong data-es="Tecnología Software - Campuslands" data-en="Software Technology - Campuslands">Tecnología Software - Campuslands</strong>
+          <span data-es="20 Julio 2025 – Presente" data-en="July 20, 2025 – Present">20 Julio 2025 – Presente</span>
         </div>
       </div>
       <div class="cv-item">
         <div class="cv-dot"></div>
         <div class="cv-item-text">
-          <strong>Curso Igles </strong>
-          <span> 20 Julio 2025 – Presente   </span>
+          <strong data-es="Curso Inglés" data-en="English Course">Curso Inglés</strong>
+          <span data-es="20 Julio 2025 – Presente" data-en="July 20, 2025 – Present">20 Julio 2025 – Presente</span>
         </div>
       </div>
     </div>
 
-    <!-- Habilidades técnicas -->
     <div class="cv-block" style="grid-column: 1 / -1;">
-      <h3>🛠 Habilidades Técnicas</h3>
+      <h3 data-es="🛠 Habilidades Técnicas" data-en="🛠 Technical Skills">🛠 Habilidades Técnicas</h3>
       <div class="skills-wrap">
         <span class="skill-pill"><span class="skill-icon">🟨</span>JavaScript</span>
         <span class="skill-pill"><span class="skill-icon">🟣</span>C#</span>
@@ -147,7 +129,7 @@
         <span class="skill-pill"><span class="skill-icon">🎨</span>CSS3</span>
         <span class="skill-pill"><span class="skill-icon">🖥️</span>.NET</span>
         <span class="skill-pill"><span class="skill-icon">🐙</span>Git / GitHub</span>
-        <span class="skill-pill"><span class="skill-icon">🤖</span>IA / LLMs</span>
+        <span class="skill-pill"><span class="skill-icon">🤖</span>AI / LLMs</span>
       </div>
     </div>
 
@@ -155,95 +137,82 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     SECCIÓN 3 — PROYECTOS
-══════════════════════════════════════════ -->
+<!-- SECCIÓN 3 — PROYECTOS -->
 <section id="proyectos">
-  <div class="section-label">03 — Portafolio</div>
-  <h2 class="section-title">Proyectos <em>destacados</em></h2>
-  <p class="section-subtitle reveal">
-    Selección de trabajos que reflejan mis habilidades técnicas y
-    mi capacidad de llevar ideas a producción.
+  <div class="section-label" data-es="03 — Portafolio" data-en="03 — Portfolio">03 — Portafolio</div>
+  <h2 class="section-title" data-es="Proyectos <em>destacados</em>" data-en="<em>Featured</em> projects">Proyectos <em>destacados</em></h2>
+  <p class="section-subtitle reveal"
+     data-es="Selección de trabajos que reflejan mis habilidades técnicas y mi capacidad de llevar ideas a producción."
+     data-en="A selection of work that reflects my technical skills and my ability to take ideas to production.">
+    Selección de trabajos que reflejan mis habilidades técnicas y mi capacidad de llevar ideas a producción.
   </p>
 
   <div class="projects-grid reveal">
 
-    <!-- ✏️ EDITA cada tarjeta con tu proyecto real -->
     <div class="project-card">
-      <img class="project-img"
-        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80"
-        alt="Proyecto 1"/>
+      <img class="project-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Proyecto 1"/>
       <div class="project-body">
         <div class="project-tags">
           <span class="project-tag">HTML5</span>
-          <span class="project-tag">Css</span>
+          <span class="project-tag">CSS</span>
         </div>
-        <h3 class="project-title">LuxTime - Página Web de Relojes</h3>
-        <p class="project-desc">LuxTime es una página web de catálogo y contacto para una tienda de relojes de lujo, desarrollada exclusivamente con HTML y CSS, sin el uso de ningún lenguaje de programación adicional.
-          El proyecto cuenta con validaciones visuales puras en el formulario, una galería de productos tipo mosaico y un diseño completamente responsivo que se adapta a distintos tamaños de pantalla.  </p>
-        <!-- ✏️ EDITA: pon aquí el link a tu repositorio o demo -->
-        <a href="https://github.com/Dams2312/proyecto-de-html.git " class="project-link">Ver proyecto</a>
+        <h3 class="project-title" data-es="LuxTime - Página Web de Relojes" data-en="LuxTime - Watch Website">LuxTime - Página Web de Relojes</h3>
+        <p class="project-desc"
+           data-es="LuxTime es una página web de catálogo y contacto para una tienda de relojes de lujo, desarrollada exclusivamente con HTML y CSS. Cuenta con validaciones visuales puras en el formulario, una galería de productos tipo mosaico y un diseño completamente responsivo."
+           data-en="LuxTime is a catalog and contact website for a luxury watch store, built exclusively with HTML and CSS. It features pure visual form validations, a mosaic-style product gallery, and a fully responsive design.">
+          LuxTime es una página web de catálogo y contacto para una tienda de relojes de lujo, desarrollada exclusivamente con HTML y CSS. Cuenta con validaciones visuales puras en el formulario, una galería de productos tipo mosaico y un diseño completamente responsivo.
+        </p>
+        <a href="https://github.com/Dams2312/proyecto-de-html.git" class="project-link" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img class="project-img"
-        src="/src/Captura de pantalla 2026-03-02 005351.png"
-        alt="Proyecto 2"/>
+      <img class="project-img" src="/src/Captura de pantalla 2026-03-02 005351.png" alt="Proyecto 2"/>
       <div class="project-body">
         <div class="project-tags">
-          <span class="project-tag">Mysql</span>
+          <span class="project-tag">MySQL</span>
         </div>
-        <h3 class="project-title">Sistema de Gestión Inmobiliaria </h3>
-        <p class="project-desc">DEste proyecto implementa una base de datos en MySQL para la gestión integral de una inmobiliaria.
-          El sistema permite administrar:
-          Propiedades (casas, apartamentos, locales comerciales)
-          Clientes
-          Contratos de venta y arriendo
-          Historial de pagos
-          Reportes automáticos
-          Seguridad por roles
-          La base de datos fue diseñada siguiendo principios de normalización hasta Tercera Forma Normal (3FN), garantizando integridad, eficiencia y escalabilidad.
-          </p>
-        <a href="https://github.com/Dams2312/proyecto_mysql2.git" class="project-link">Ver proyecto</a>
+        <h3 class="project-title" data-es="Sistema de Gestión Inmobiliaria" data-en="Real Estate Management System">Sistema de Gestión Inmobiliaria</h3>
+        <p class="project-desc"
+           data-es="Base de datos en MySQL para la gestión integral de una inmobiliaria. Administra propiedades, clientes, contratos, historial de pagos y reportes automáticos. Diseñada siguiendo normalización hasta Tercera Forma Normal (3FN)."
+           data-en="A MySQL database for comprehensive real estate management. Handles properties, clients, contracts, payment history, and automated reports. Designed following normalization up to Third Normal Form (3NF).">
+          Base de datos en MySQL para la gestión integral de una inmobiliaria. Administra propiedades, clientes, contratos, historial de pagos y reportes automáticos. Diseñada siguiendo normalización hasta Tercera Forma Normal (3FN).
+        </p>
+        <a href="https://github.com/Dams2312/proyecto_mysql2.git" class="project-link" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img class="project-img"
-        src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80"
-        alt="Proyecto 3"/>
+      <img class="project-img" src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80" alt="Proyecto 3"/>
       <div class="project-body">
         <div class="project-tags">
           <span class="project-tag">JavaScript</span>
           <span class="project-tag">HTML</span>
-          <span class="project-tag">Css</span>
+          <span class="project-tag">CSS</span>
         </div>
-        <h3 class="project-title">LMS - Sistema de Gestión de Aprendizaje (ABC)</h3>
-        <p class="project-desc">Este proyecto fue desarrollado para la Institución Educativa ABC, con el objetivo de crear una plataforma interactiva y funcional que permita la gestión de cursos, docentes, módulos, lecciones y personal administrativo.
-                                El sistema permite que la comunidad educativa acceda a la información de manera práctica, mejorando la experiencia de aprendizaje y la gestión académica.</p>
-        <a href="https://github.com/Dams2312/proyecto-de-js.git" class="project-link">Ver proyecto</a>
+        <h3 class="project-title" data-es="LMS - Sistema de Gestión de Aprendizaje" data-en="LMS - Learning Management System">LMS - Sistema de Gestión de Aprendizaje</h3>
+        <p class="project-desc"
+           data-es="Sistema de gestión de aprendizaje (ABC) desarrollado con JavaScript, HTML y CSS."
+           data-en="Learning Management System (ABC) developed with JavaScript, HTML and CSS.">
+          Sistema de gestión de aprendizaje (ABC) desarrollado con JavaScript, HTML y CSS.
+        </p>
+        <a href="https://github.com/Dams2312/proyecto-de-js.git" class="project-link" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
       </div>
     </div>
 
     <div class="project-card">
-      <img class="project-img"
-        src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80"
-        alt="Proyecto 4"/>
+      <img class="project-img" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80" alt="Proyecto 4"/>
       <div class="project-body">
         <div class="project-tags">
           <span class="project-tag">C#</span>
         </div>
-        <h3 class="project-title">Simulador Liga BetPlay en Consola</h3>
-        <p class="project-desc">Este proyecto consiste en una aplicación de consola desarrollada en C# que permite simular el funcionamiento básico de la Liga BetPlay.
-
-          El programa permite:          
-          Registrar equipos
-          Simular partidos manualmente
-          Calcular estadísticas automáticamente
-          Mostrar tabla de posiciones
-          Consultar información del torneo usando LINQ</p>
-        <a href="https://github.com/Dams2312/BetPlayLiga.git  " class="project-link">Ver proyecto</a>
+        <h3 class="project-title" data-es="Simulador Liga BetPlay en Consola" data-en="BetPlay League Console Simulator">Simulador Liga BetPlay en Consola</h3>
+        <p class="project-desc"
+           data-es="Aplicación de consola en C# que simula el funcionamiento básico de la Liga BetPlay. Permite registrar equipos, simular partidos, calcular estadísticas, mostrar tabla de posiciones y consultar información del torneo usando LINQ."
+           data-en="A C# console application that simulates the basic workings of the BetPlay League. Allows registering teams, simulating matches, calculating stats, displaying standings, and querying tournament information using LINQ.">
+          Aplicación de consola en C# que simula el funcionamiento básico de la Liga BetPlay. Permite registrar equipos, simular partidos, calcular estadísticas, mostrar tabla de posiciones y consultar información del torneo usando LINQ.
+        </p>
+        <a href="https://github.com/Dams2312/BetPlayLiga.git" class="project-link" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
       </div>
     </div>
 
@@ -251,20 +220,21 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     SECCIÓN 4 — CERTIFICADOS
-══════════════════════════════════════════ -->
+<!-- SECCIÓN 4 — CERTIFICADOS -->
 <section id="certificados">
-  <div class="section-label">04 — Formación</div>
-  <h2 class="section-title">Certificados y <em>cursos</em></h2>
-  <p class="section-subtitle reveal">Aprendizaje continuo que respalda mis habilidades técnicas.</p>
+  <div class="section-label" data-es="04 — Formación" data-en="04 — Training">04 — Formación</div>
+  <h2 class="section-title" data-es="Certificados y <em>cursos</em>" data-en="Certificates and <em>courses</em>">Certificados y <em>cursos</em></h2>
+  <p class="section-subtitle reveal"
+     data-es="Aprendizaje continuo que respalda mis habilidades técnicas."
+     data-en="Continuous learning that backs up my technical skills.">
+    Aprendizaje continuo que respalda mis habilidades técnicas.
+  </p>
 
   <div class="certs-grid reveal">
-    <!-- ✏️ EDITA cada certificado con tu formación real -->
     <div class="cert-card">
       <div class="cert-icon">🏅</div>
       <div class="cert-info">
-        <strong>Tecnoligia Sofware Front-end</strong>
+        <strong data-es="Tecnología Software Front-end" data-en="Software Technology Front-end">Tecnología Software Front-end</strong>
         <span>Campuslands</span>
       </div>
       <span class="cert-year">2026</span>
@@ -272,7 +242,7 @@
     <div class="cert-card">
       <div class="cert-icon">🏅</div>
       <div class="cert-info">
-        <strong>Tecnoligia Sofware Back-end</strong>
+        <strong data-es="Tecnología Software Back-end" data-en="Software Technology Back-end">Tecnología Software Back-end</strong>
         <span>Campuslands</span>
       </div>
       <span class="cert-year">2026</span>
@@ -280,7 +250,7 @@
     <div class="cert-card">
       <div class="cert-icon">⭐</div>
       <div class="cert-info">
-        <strong>Ingles</strong>
+        <strong data-es="Inglés" data-en="English">Inglés</strong>
         <span>Campuslands</span>
       </div>
       <span class="cert-year">2026</span>
@@ -288,7 +258,7 @@
     <div class="cert-card">
       <div class="cert-icon">🤖</div>
       <div class="cert-info">
-        <strong>Automatizacion con IA </strong>
+        <strong data-es="Automatización con IA" data-en="AI Automation">Automatización con IA</strong>
         <span>Campuslands</span>
       </div>
       <span class="cert-year">2026</span>
@@ -297,50 +267,55 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     SECCIÓN 5 — TESTIMONIOS
-══════════════════════════════════════════ -->
+<!-- SECCIÓN 5 — TESTIMONIOS -->
 <section id="testimonios">
-  <div class="section-label">05 — Recomendaciones</div>
-  <h2 class="section-title">Lo que dicen <em>de mí</em></h2>
-  <p class="section-subtitle reveal">Testimonios de clientes, colegas y compañeros de trabajo.</p>
+  <div class="section-label" data-es="05 — Recomendaciones" data-en="05 — Recommendations">05 — Recomendaciones</div>
+  <h2 class="section-title" data-es="Lo que dicen <em>de mí</em>" data-en="What they say <em>about me</em>">Lo que dicen <em>de mí</em></h2>
+  <p class="section-subtitle reveal"
+     data-es="Testimonios de clientes, colegas y compañeros de trabajo."
+     data-en="Testimonials from clients, colleagues, and coworkers.">
+    Testimonios de clientes, colegas y compañeros de trabajo.
+  </p>
 
   <div class="testimonios-grid reveal">
-    <!-- ✏️ EDITA cada testimonio con recomendaciones reales -->
     <div class="testimonio-card">
-      <p class="testimonio-text">
-        "Es una gran persona y programador centrado en su trabajo y con gran centido de responsabilidad y pertenencia"
+      <p class="testimonio-text"
+         data-es='"Es una gran persona y programador centrado en su trabajo y con gran sentido de responsabilidad y pertenencia."'
+         data-en='"He is a great person and programmer, focused on his work with a strong sense of responsibility and belonging."'>
+        "Es una gran persona y programador centrado en su trabajo y con gran sentido de responsabilidad y pertenencia."
       </p>
       <div class="testimonio-author">
-        <img class="testimonio-avatar"
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
-          alt="Nombre Persona"/>
+        <img class="testimonio-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Mendiverso"/>
         <div class="testimonio-name">
           <strong>Mendiverso</strong>
-          <span>Psicologa</span>
+          <span data-es="Psicóloga" data-en="Psychologist">Psicóloga</span>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     SECCIÓN 6 — CONTACTO
-══════════════════════════════════════════ -->
+<!-- SECCIÓN 6 — CONTACTO -->
 <section id="contacto">
-  <div class="section-label">06 — Contacto</div>
-  <h2 class="section-title">Hablemos sobre<br>tu <em>próximo proyecto</em></h2>
-  <p class="section-subtitle">¿Tienes una idea? ¿Buscas un desarrollador? Escríbeme.</p>
+  <div class="section-label" data-es="06 — Contacto" data-en="06 — Contact">06 — Contacto</div>
+  <h2 class="section-title">
+    <span data-es="Hablemos sobre" data-en="Let's talk about">Hablemos sobre</span><br>
+    <span data-es="tu <em>próximo proyecto</em>" data-en="your <em>next project</em>">tu <em>próximo proyecto</em></span>
+  </h2>
+  <p class="section-subtitle"
+     data-es="¿Tienes una idea? ¿Buscas un desarrollador? Escríbeme."
+     data-en="Do you have an idea? Looking for a developer? Write to me.">
+    ¿Tienes una idea? ¿Buscas un desarrollador? Escríbeme.
+  </p>
 
   <div class="contact-layout reveal">
 
-    <!-- Redes y datos de contacto -->
     <div class="contact-info-items">
-      <!-- ✏️ EDITA cada enlace con tus datos reales -->
-      <a href="mailto:tuemail@gmail.com" class="contact-item">
+      <a href="mailto:dannyolarte2312@gmail.com" class="contact-item">
         <div class="contact-item-icon">📧</div>
         <div class="contact-item-text">
-          <strong>Correo electrónico</strong>
+          <strong data-es="Correo electrónico" data-en="Email">Correo electrónico</strong>
           <span>dannyolarte2312@gmail.com</span>
         </div>
       </a>
@@ -348,14 +323,14 @@
         <div class="contact-item-icon">🐙</div>
         <div class="contact-item-text">
           <strong>GitHub</strong>
-          <span>Dams2312 </span>
+          <span>Dams2312</span>
         </div>
       </a>
-      <a href="https://www.linkedin.com/in/danny-julian-velasco-olarte-574b76395/" target="_blank" class="contact-item">
+      <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-item">
         <div class="contact-item-icon">💼</div>
         <div class="contact-item-text">
           <strong>LinkedIn</strong>
-          <span>danny julian velasco olarte</span>
+          <span>linkedin.com/in/tuusuario</span>
         </div>
       </a>
       <a href="https://instagram.com/tuusuario" target="_blank" class="contact-item">
@@ -367,44 +342,39 @@
       </a>
     </div>
 
-    <!-- Formulario de contacto -->
     <div class="contact-form">
       <div class="form-row">
         <div class="form-group">
-          <label>Nombre</label>
-          <input type="text" placeholder="Tu nombre"/>
+          <label data-es="Nombre" data-en="Name">Nombre</label>
+          <input type="text" data-es-placeholder="Tu nombre" data-en-placeholder="Your name" placeholder="Tu nombre"/>
         </div>
         <div class="form-group">
-          <label>Correo</label>
+          <label data-es="Correo" data-en="Email">Correo</label>
           <input type="email" placeholder="tu@email.com"/>
         </div>
       </div>
       <div class="form-group">
-        <label>Asunto</label>
-        <input type="text" placeholder="¿En qué puedo ayudarte?"/>
+        <label data-es="Asunto" data-en="Subject">Asunto</label>
+        <input type="text" data-es-placeholder="¿En qué puedo ayudarte?" data-en-placeholder="How can I help you?" placeholder="¿En qué puedo ayudarte?"/>
       </div>
       <div class="form-group">
-        <label>Mensaje</label>
-        <textarea rows="5" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+        <label data-es="Mensaje" data-en="Message">Mensaje</label>
+        <textarea rows="5" data-es-placeholder="Cuéntame sobre tu proyecto..." data-en-placeholder="Tell me about your project..." placeholder="Cuéntame sobre tu proyecto..."></textarea>
       </div>
-      <button class="btn-send">Enviar mensaje ✦</button>
+      <button class="btn-send" data-es="Enviar mensaje ✦" data-en="Send message ✦">Enviar mensaje ✦</button>
     </div>
 
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════ -->
 <footer>
-  <!-- ✏️ EDITA: tu nombre -->
-  <p>Diseñado y desarrollado por <strong>Danny</strong> · 2026</p>
+  <p data-es="Diseñado y desarrollado con 💜 por <strong>Danny Velasco</strong> · 2025"
+     data-en="Designed and developed with 💜 by <strong>Danny Velasco</strong> · 2025">
+    Diseñado y desarrollado con 💜 por <strong>Danny Velasco</strong> · 2025
+  </p>
 </footer>
 
-
-<!-- Script externo — siempre al final del body -->
 <script src="js/main.js"></script>
-
 </body>
 </html>

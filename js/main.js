@@ -1,14 +1,7 @@
-/* ══════════════════════════════════════════
-   PORTAFOLIO — Full Stack Developer
-   js/main.js
-══════════════════════════════════════════ */
-
 'use strict';
 
 /* ──────────────────────────────────────────
    1. SCROLL REVEAL
-   Detecta elementos .reveal y los anima
-   cuando entran en el viewport
 ────────────────────────────────────────── */
 function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal');
@@ -27,7 +20,6 @@ function initScrollReveal() {
 
   reveals.forEach((el) => observer.observe(el));
 
-  // Animación escalonada para hijos dentro de grids
   const grids = document.querySelectorAll(
     '.projects-grid, .certs-grid, .testimonios-grid, .cv-grid'
   );
@@ -46,8 +38,6 @@ function initScrollReveal() {
 
 /* ──────────────────────────────────────────
    2. NAV ACTIVO AL SCROLL
-   Marca el link activo según la sección
-   visible en pantalla
 ────────────────────────────────────────── */
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
@@ -55,13 +45,11 @@ function initActiveNav() {
 
   const highlightNav = () => {
     let current = '';
-
     sections.forEach((section) => {
       if (window.scrollY >= section.offsetTop - 120) {
         current = section.id;
       }
     });
-
     navLinks.forEach((link) => {
       link.style.color =
         link.getAttribute('href') === `#${current}`
@@ -75,40 +63,88 @@ function initActiveNav() {
 
 /* ──────────────────────────────────────────
    3. FORMULARIO DE CONTACTO
-   Maneja el envío del formulario
 ────────────────────────────────────────── */
 function initContactForm() {
   const btn = document.querySelector('.btn-send');
   if (!btn) return;
-
   btn.addEventListener('click', handleForm);
 }
 
 function handleForm() {
+  const lang    = document.documentElement.lang;
   const nombre  = document.querySelector('#contacto input[type="text"]')?.value?.trim();
   const correo  = document.querySelector('#contacto input[type="email"]')?.value?.trim();
-  const asunto  = document.querySelector('#contacto input:nth-of-type(3)')?.value?.trim();
   const mensaje = document.querySelector('#contacto textarea')?.value?.trim();
 
   if (!nombre || !correo || !mensaje) {
-    alert('⚠️ Por favor completa los campos requeridos: nombre, correo y mensaje.');
+    alert(
+      lang === 'en'
+        ? '⚠️ Please fill in the required fields: name, email and message.'
+        : '⚠️ Por favor completa los campos requeridos: nombre, correo y mensaje.'
+    );
     return;
   }
 
-  // ✏️ EDITA: conecta aquí Formspree, EmailJS u otro servicio
-  // Ejemplo con Formspree:
-  // fetch('https://formspree.io/f/TU_ID', { method: 'POST', body: formData })
-
   alert(
-    `✅ ¡Mensaje recibido, ${nombre}!\n\nPronto me pondré en contacto contigo.\n\n💜 Gracias por escribir.\n\n(Conecta este formulario a Formspree o EmailJS para activarlo en producción.)`
+    lang === 'en'
+      ? `✅ Message received, ${nombre}!\n\nI'll get back to you soon.\n\n💜 Thank you for reaching out.`
+      : `✅ ¡Mensaje recibido, ${nombre}!\n\nPronto me pondré en contacto contigo.\n\n💜 Gracias por escribir.`
   );
 }
 
 /* ──────────────────────────────────────────
-   4. INIT — Punto de entrada
+   4. SISTEMA DE TRADUCCIÓN
+────────────────────────────────────────── */
+function initLangToggle() {
+  const btn = document.getElementById('langBtn');
+  if (!btn) return;
+
+  let currentLang = localStorage.getItem('portfolioLang') || 'es';
+  applyLang(currentLang, false);
+
+  btn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    localStorage.setItem('portfolioLang', currentLang);
+    applyLang(currentLang, true);
+  });
+}
+
+function applyLang(lang, animate) {
+  const btn       = document.getElementById('langBtn');
+  const flagEl    = btn.querySelector('.lang-flag');
+  const labelEl   = btn.querySelector('.lang-label');
+  const isEN      = lang === 'en';
+
+  // Actualizar botón
+  flagEl.textContent  = isEN ? '🇪🇸' : '🇬🇧';
+  labelEl.textContent = isEN ? 'ES' : 'EN';
+  btn.setAttribute('aria-label', isEN ? 'Switch to Spanish' : 'Cambiar a Inglés');
+
+  // Atributo lang en <html>
+  document.documentElement.lang = lang;
+
+  // Traducir todos los elementos con data-es / data-en
+  document.querySelectorAll('[data-es][data-en]').forEach((el) => {
+    const text = el.getAttribute(`data-${lang}`);
+    if (animate) el.classList.add('lang-fade');
+    el.innerHTML = text;
+    if (animate) {
+      el.addEventListener('animationend', () => el.classList.remove('lang-fade'), { once: true });
+    }
+  });
+
+  // Traducir placeholders de inputs/textareas
+  document.querySelectorAll('[data-es-placeholder][data-en-placeholder]').forEach((el) => {
+    el.placeholder = el.getAttribute(`data-${lang}-placeholder`);
+  });
+}
+
+/* ──────────────────────────────────────────
+   5. INIT
 ────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initActiveNav();
   initContactForm();
+  initLangToggle();
 });
